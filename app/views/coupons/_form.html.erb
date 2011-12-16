@@ -1,0 +1,69 @@
+<%= form_for(@coupon) do |f| %>
+  <% if @coupon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coupon.errors.count, "error") %> prohibited this coupon from being saved:</h2>
+
+      <ul>
+      <% @coupon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :highlights %><br />
+    <%= f.text_area :highlights %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :published_at %><br />
+    <%= f.datetime_select :published_at %>
+  </div>
+  <div class="field">
+    <%= f.label :expiry_date %><br />
+    <%= f.datetime_select :expiry_date %>
+  </div>
+  <div class="field">
+    <%= f.label :shop %><br />
+    <%= f.text_field :shop %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :full_price %><br />
+    <%= f.text_field :full_price %>
+  </div>
+  <div class="field">
+    <%= f.label :coupon_price %><br />
+    <%= f.text_field :coupon_price %>
+  </div>
+  <div class="field">
+    <%= f.label :min_user_limit %><br />
+    <%= f.number_field :min_user_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :max_avaliable %><br />
+    <%= f.number_field :max_avaliable %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

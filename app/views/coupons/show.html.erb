@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @coupon.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @coupon.description %>
+</p>
+
+<p>
+  <b>Highlights:</b>
+  <%= @coupon.highlights %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @coupon.status %>
+</p>
+
+<p>
+  <b>Published at:</b>
+  <%= @coupon.published_at %>
+</p>
+
+<p>
+  <b>Expiry date:</b>
+  <%= @coupon.expiry_date %>
+</p>
+
+<p>
+  <b>Shop:</b>
+  <%= @coupon.shop %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @coupon.city %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @coupon.image %>
+</p>
+
+<p>
+  <b>Full price:</b>
+  <%= @coupon.full_price %>
+</p>
+
+<p>
+  <b>Coupon price:</b>
+  <%= @coupon.coupon_price %>
+</p>
+
+<p>
+  <b>Min user limit:</b>
+  <%= @coupon.min_user_limit %>
+</p>
+
+<p>
+  <b>Max avaliable:</b>
+  <%= @coupon.max_avaliable %>
+</p>
+
+
+<%= link_to 'Edit', edit_coupon_path(@coupon) %> |
+<%= link_to 'Back', coupons_path %>

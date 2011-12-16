@@ -1,4 +1,16 @@
 Coletivo::Application.routes.draw do
+  resources :users
+
+  resources :shops
+
+  resources :purchases
+
+  resources :coupons
+
+  resources :roles
+
+  resources :cities
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

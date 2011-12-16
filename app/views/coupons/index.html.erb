@@ -1,0 +1,47 @@
+<h1>Listing coupons</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Highlights</th>
+    <th>Status</th>
+    <th>Published at</th>
+    <th>Expiry date</th>
+    <th>Shop</th>
+    <th>City</th>
+    <th>Image</th>
+    <th>Full price</th>
+    <th>Coupon price</th>
+    <th>Min user limit</th>
+    <th>Max avaliable</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @coupons.each do |coupon| %>
+  <tr>
+    <td><%= coupon.title %></td>
+    <td><%= coupon.description %></td>
+    <td><%= coupon.highlights %></td>
+    <td><%= coupon.status %></td>
+    <td><%= coupon.published_at %></td>
+    <td><%= coupon.expiry_date %></td>
+    <td><%= coupon.shop %></td>
+    <td><%= coupon.city %></td>
+    <td><%= coupon.image %></td>
+    <td><%= coupon.full_price %></td>
+    <td><%= coupon.coupon_price %></td>
+    <td><%= coupon.min_user_limit %></td>
+    <td><%= coupon.max_avaliable %></td>
+    <td><%= link_to 'Show', coupon %></td>
+    <td><%= link_to 'Edit', edit_coupon_path(coupon) %></td>
+    <td><%= link_to 'Destroy', coupon, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Coupon', new_coupon_path %>

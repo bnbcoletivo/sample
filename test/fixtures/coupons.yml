@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  highlights: MyText
+  status: MyString
+  published_at: 2011-12-15 22:30:39
+  expiry_date: 2011-12-15 22:30:39
+  shop: 
+  city: 
+  image: MyString
+  full_price: 1.5
+  coupon_price: 1.5
+  min_user_limit: 1
+  max_avaliable: 1
+
+two:
+  title: MyString
+  description: MyText
+  highlights: MyText
+  status: MyString
+  published_at: 2011-12-15 22:30:39
+  expiry_date: 2011-12-15 22:30:39
+  shop: 
+  city: 
+  image: MyString
+  full_price: 1.5
+  coupon_price: 1.5
+  min_user_limit: 1
+  max_avaliable: 1
