@@ -2,7 +2,13 @@ class CouponsController < ApplicationController
   # GET /coupons
   # GET /coupons.json
   def index
-    @coupons = Coupon.all
+    
+    if params[:lat] && params[:lng]
+      @coupons = Coupon.with_location(params[:lat], params[:lng]).all
+    else
+      @coupons = Coupon.all
+    end
+    
 
     respond_to do |format|
       format.html # index.html.erb
