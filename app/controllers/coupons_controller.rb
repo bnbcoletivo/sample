@@ -3,8 +3,8 @@ class CouponsController < ApplicationController
   # GET /coupons.json
   def index
     
-    if params[:lat] && params[:lng]
-      @coupons = Coupon.with_location(params[:lat], params[:lng]).all
+    if params[:location]
+      @coupons = Coupon.with_location(params[:location]).all
     else
       @coupons = Coupon.all
     end

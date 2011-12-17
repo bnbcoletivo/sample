@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111216022826) do
+ActiveRecord::Schema.define(:version => 20111217000550) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -73,6 +73,13 @@ ActiveRecord::Schema.define(:version => 20111216022826) do
   add_index "coupons", ["city_id"], :name => "index_coupons_on_city_id"
   add_index "coupons", ["shop_id"], :name => "index_coupons_on_shop_id"
 
+  create_table "locations", :force => true do |t|
+    t.string   "lat"
+    t.string   "lng"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "purchases", :force => true do |t|
     t.integer  "user_id"
     t.integer  "coupon_id"
@@ -95,11 +102,10 @@ ActiveRecord::Schema.define(:version => 20111216022826) do
     t.string   "name"
     t.string   "address"
     t.integer  "city_id"
-    t.string   "lat"
-    t.string   "lng"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "location_id"
   end
 
   add_index "shops", ["city_id"], :name => "index_shops_on_city_id"

@@ -1,4 +1,8 @@
 Coletivo::Application.routes.draw do
+  get "scaffold/Locations"
+
+  resources :locations
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
